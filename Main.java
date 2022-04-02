@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.lang.*;
-
+import java.util.*;
 
 
 class Main {
@@ -34,14 +34,14 @@ class Main {
               if(Character.isLowerCase(tab[i])){
               if(z==1){
                 tab[i]= Character.toUpperCase(tab[i]);
-                zmienione = zmienione +1;
+                zmienione++;
                 System.out.print(tab[i]);
                 }else{System.out.print(tab[i]);
                 }
                 }else{
                 if(z==2){
                 tab[i]= Character.toLowerCase(tab[i]);
-                zmienione = zmienione +1;
+                zmienione++;
                System.out.print(tab[i]);
               } else{
                 System.out.print(tab[i]);
@@ -53,7 +53,31 @@ class Main {
         System.out.println();
         System.out.println("Liczba zamienionych liter:  "+zmienione);
     
-    break;
+        break;
+        
+      case 2:
+      System.out.println("Wprowadzaj kolejne znaki, aby zakończyć wciśnij \"Q\"");
+      
+     List<String> list= new ArrayList<>();
+        
+      String znak = null;
+      boolean warunek = false;
+      while(warunek != true ){
+        
+        znak=scan.nextLine();
+        warunek = znak.equals("Q");
+        list.add(znak);
+        
+        
+        
+      }
+        System.out.println("koniec");
+
+        for (String elementy : list) {
+        System.out.print(elementy);
+}
+  
+  
     }
   }
  }

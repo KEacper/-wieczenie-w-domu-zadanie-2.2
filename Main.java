@@ -79,6 +79,27 @@ class Main {
       break;
         
     case 3:
+        System.out.println("Liczenie znaków tablicy, zadeklaruj liczbę elementów.");
+        int dlu = scan.nextInt();
+        System.out.println("Wprowadź elementy tablicy oddzielone enterami");
+
+        int dlug= dlu+1;
+        String tablica[]=new String[dlug];
+        // String element = "";
+        for(int i=0;i<dlug;i++){
+          String element=scan.nextLine();
+          tablica[i]= element;
+        }
+        int suma = 0;
+         for(int i=0; i<dlug; i++){
+          int wielkosc=tablica[i].length();
+           suma = suma+wielkosc;
+        } 
+        System.out.println("Ilość znaków w tablicy to: "+suma);
+        //         for(int i=0; i<dlug; i++){
+        //   System.out.print(tablica[i]);
+        // } 
+        
     break;
       case 4:
         System.out.println("Wprowadź dowolny tekst oddzielony spacjami");

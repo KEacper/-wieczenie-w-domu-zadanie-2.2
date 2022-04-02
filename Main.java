@@ -79,7 +79,31 @@ class Main {
       break;
         
     case 3:
+    break;
+      case 4:
+        System.out.println("Wprowadź dowolny tekst oddzielony spacjami");
+        scan.nextLine();
+        String zdanie=scan.nextLine();
+        int dl= zdanie.length();
+        char tabl[] = new char[dl];
+       for(int i=0;i<dl;i++){
+         tabl[i]=zdanie.charAt(i);
+       }
         
+        for(int i=0;i<dl;i++){
+          
+          if (tabl[i] == ' '){
+            tabl[i] = '_';
+          }else{
+            tabl[i]=tabl[i];
+          }
+        }
+        System.out.println("Twoje zamienione zdanie to: ");
+        for(int i=0; i<dl; i++){
+          System.out.print(tabl[i]);
+        }
+        break;
+      
     }
   }
  }

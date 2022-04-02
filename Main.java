@@ -9,7 +9,7 @@ class Main {
   System.out.println("Witaj w programie, Wybierz funkcję:");
   System.out.println("1) Zamiana liter");
   System.out.println("2) Kopiowanie znak po znaku");
-  System.out.println("3) Liczenie znaków");
+  System.out.println("3) Liczenie znaków w tablicy");
   System.out.println("4) Zamiana spacji na podkreślenia");
   int s = scan.nextInt();
     switch(s){
@@ -60,24 +60,26 @@ class Main {
       
      List<String> list= new ArrayList<>();
         
-      String znak = null;
+      String znak = "";
       boolean warunek = false;
       while(warunek != true ){
-        
-        znak=scan.nextLine();
-        warunek = znak.equals("Q");
         list.add(znak);
+        znak=scan.nextLine();
+        if(znak.equals("Q")||znak.equals("q")){warunek = true;}
+        //warunek = znak.equals("Q");
         
         
-        
-      }
+        }
         System.out.println("koniec");
 
         for (String elementy : list) {
         System.out.print(elementy);
-}
+        }
   
-  
+      break;
+        
+    case 3:
+        
     }
   }
  }
